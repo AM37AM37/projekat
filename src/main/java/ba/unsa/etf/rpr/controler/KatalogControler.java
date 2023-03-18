@@ -23,6 +23,7 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.Vector;
 
 import static ba.unsa.etf.rpr.AppFX.*;
@@ -64,6 +65,7 @@ public class KatalogControler {
             }
             loadedTankId=0;
             usernameLabel.setText(currentUser.getUsername());
+            fixTankId();
             badHomeLoader();
         } catch (Exception e) {
             new Alert(Alert.AlertType.NONE, e.getMessage(), ButtonType.OK).show();
@@ -114,9 +116,10 @@ public class KatalogControler {
 
         if(loadedTankId+1<DaoFactory.katalogDao().getNextTankId()) {
             loadedTankId+=1;
+            int i=1;
             Katalog tankToLoad = DaoFactory.katalogDao().getById(loadedTankId);
             while((tankToLoad.getTankAmount()==0)!=Sold){
-                if(loadedTankId+1<DaoFactory.katalogDao().getNextTankId()) {
+                if(loadedTankId+i<DaoFactory.katalogDao().getNextTankId()) {
                     loadedTankId += 1;
                     tankToLoad = DaoFactory.katalogDao().getById(loadedTankId);
                 }else {
@@ -175,7 +178,7 @@ public class KatalogControler {
 
     public void loadPreviusKatalog(ActionEvent actionEvent) throws Exception {
         loadedTankId-=17;
-        if(loadedTankId==-9) {
+        if(loadedTankId==-8) {
             noMoreLoad.setText("No previous tanks to load");
             moreLoad=false;
         }
@@ -218,7 +221,16 @@ public class KatalogControler {
     }
 
 
-
+    public static void fixTankId() throws Exception {
+        List<Katalog> k=DaoFactory.katalogDao().getAll();
+        for(int i=1;i<=k.size();i++){
+            if(k.get(i-1).getId()!=i){
+                DaoFactory.katalogDao().updateTankId(k.get(k.size()-1).getId(), i);
+                k=DaoFactory.katalogDao().getAll();
+                i=0;
+            }
+        }
+    }
 
 
 }

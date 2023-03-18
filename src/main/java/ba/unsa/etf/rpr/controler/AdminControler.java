@@ -110,7 +110,7 @@ public class AdminControler {
 
 
     public void setUpadeNewTank(Katalog k) throws SQLException, IOException {
-        //idTankField.setText(String.valueOf(k.getId()));
+        idTankField.setText(String.valueOf(k.getId()));
         nameTankField.setText(k.getTankName());
         classTankField.setText((k.getTankClass()));
         amountTankField.setText(String.valueOf(k.getTankAmount()));
@@ -118,10 +118,14 @@ public class AdminControler {
         descriptionTankField.setText(k.getDescription());
         browseImageView.setImage(BlobToImage(k.getTankImage()));
     }
-    public Katalog getUpdateNewTank() throws IOException, SQLException {
+    public Katalog getUpdateNewTank(boolean b) throws IOException, SQLException {
 
         Katalog k=new Katalog();
-        //k.setId(Integer.parseInt(idTankField.getText()));
+        if(b) {
+            k.setId(Integer.parseInt(idTankField.getText()));
+        }else {
+            k.setId(0);
+        }
         k.setTankName(nameTankField.getText());
         k.setTankClass(classTankField.getText());
         k.setTankAmount(Integer.parseInt(amountTankField.getText()));
@@ -135,32 +139,36 @@ public class AdminControler {
         setUpadeNewTank(k);
     }
     public void onUpdateTankClick() throws Exception {
-
-        DaoFactory.katalogDao().update(getUpdateNewTank());
+        DaoFactory.katalogDao().update(getUpdateNewTank(true));
     }
 
     public void onAddNewTankClick() throws Exception {
-        DaoFactory.katalogDao().add(getUpdateNewTank());
+        DaoFactory.katalogDao().add(getUpdateNewTank(false));
     }
 
     public void onRemoveTankClick() throws Exception {
-        DaoFactory.katalogDao().delete(getUpdateNewTank().getId());
+        DaoFactory.katalogDao().delete(getUpdateNewTank(true).getId());
     }
 
 
 
 
     public void setUpdateNewRecite(Recite r){
-       // idReciteField.setText(String.valueOf(r.getId()));
+        idReciteField.setText(String.valueOf(r.getId()));
         userIdReciteField.setText(String.valueOf(r.getUserId()));
         tankIdReciteField.setText(String.valueOf(r.getTankId()));
         amountReciteField.setText(String.valueOf(r.getAmount()));
         totalReciteField.setText(String.valueOf(r.getTotal()));
         tankNameReciteField.setText(r.getTankName());
     }
-    public Recite getUpdateNewRecite(){
+    public Recite getUpdateNewRecite(boolean b){
         Recite r=new Recite();
-       // r.setUserId(Integer.parseInt(userIdReciteField.getText()));
+        if(b) {
+            r.setId(Integer.parseInt(idReciteField.getText()));
+        }else {
+            r.setId(0);
+        }
+        r.setUserId(Integer.parseInt(userIdReciteField.getText()));
         r.setTankId(Integer.parseInt(tankIdReciteField.getText()));
         r.setAmount(Integer.parseInt(amountReciteField.getText()));
         r.setTotal(Integer.parseInt(totalReciteField.getText()));
@@ -172,16 +180,15 @@ public class AdminControler {
         setUpdateNewRecite(r);
     }
     public void onUpdateReciteClick() throws Exception {
-
-        DaoFactory.reciteDao().update(getUpdateNewRecite());
+        DaoFactory.reciteDao().update(getUpdateNewRecite(true));
     }
 
     public void onAddNewReciteClick() throws Exception {
-        DaoFactory.reciteDao().add(getUpdateNewRecite());
+        DaoFactory.reciteDao().add(getUpdateNewRecite(false));
     }
 
     public void onRemoveReciteClick() throws Exception {
-        DaoFactory.reciteDao().delete(getUpdateNewRecite().getId());
+        DaoFactory.reciteDao().delete(getUpdateNewRecite(true).getId());
     }
 
 
@@ -189,12 +196,18 @@ public class AdminControler {
 
 
     public void setUpdateNewUser(User r){
+        idUserField.setText(String.valueOf(r.getId()));
         usernameUserField.setText(r.getUsername());
         emailUserField.setText(r.getEmail());
         passwordUserField.setText(r.getPassword());
     }
-    public User getUpdateNewUser(){
+    public User getUpdateNewUser(Boolean b){
         User u=new User();
+            if(b) {
+                u.setId(Integer.parseInt(idUserField.getText()));
+            }else {
+                u.setId(0);
+            }
         u.setUsername(usernameUserField.getText());
         u.setEmail(emailUserField.getText());
         u.setPassword(passwordUserField.getText());
@@ -205,16 +218,15 @@ public class AdminControler {
         setUpdateNewUser(r);
     }
     public void onUpdateUserClick() throws Exception {
-
-        DaoFactory.userDao().update(getUpdateNewUser());
+       DaoFactory.userDao().update(getUpdateNewUser(true));
     }
 
     public void onAddNewUserClick() throws Exception {
-        DaoFactory.userDao().add(getUpdateNewUser());
+        DaoFactory.userDao().add(getUpdateNewUser(false));
     }
 
     public void onRemoveUserClick() throws Exception {
-        DaoFactory.userDao().delete(getUpdateNewUser().getId());
+        DaoFactory.userDao().delete(getUpdateNewUser(true).getId());
     }
 
 

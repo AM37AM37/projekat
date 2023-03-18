@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox  minHeight="720.0" minWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<VBox minHeight="720.0" minWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
   <children>
 
 
@@ -106,7 +106,15 @@
                         <Cursor fx:constant="DEFAULT" />
                      </cursor>
                   </Button>
-                  <Button fx:id="profileButton" contentDisplay="CENTER" layoutY="199.0" mnemonicParsing="false" onMouseEntered="#ChangeColor" onMouseExited="#RevertColor" prefHeight="62.0" prefWidth="230.0" style="-fx-background-color: black; -fx-border-color: darkgray;" text="Profile" textAlignment="CENTER" textFill="WHITE">
+                  <Button fx:id="profileButton" contentDisplay="CENTER" layoutY="199.0" mnemonicParsing="false" onAction="#openProfile" onMouseEntered="#ChangeColor" onMouseExited="#RevertColor" prefHeight="62.0" prefWidth="230.0" style="-fx-background-color: black; -fx-border-color: darkgray;" text="Profile" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="adminButton" contentDisplay="CENTER" layoutY="263.0" mnemonicParsing="false" onAction="#openAdmin" onMouseEntered="#ChangeColor" onMouseExited="#RevertColor" prefHeight="62.0" prefWidth="230.0" style="-fx-background-color: black; -fx-border-color: darkgray;" text="Admin" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="29.0" />
                      </font>

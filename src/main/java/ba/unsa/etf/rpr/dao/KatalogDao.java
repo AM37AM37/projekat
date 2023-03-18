@@ -10,6 +10,7 @@ public interface KatalogDao extends Dao<Katalog>{
 
     Katalog getById(int id) throws Exception;
     int getNextTankId() throws Exception;
+    void updateTankId(int old,int neww) throws Exception;
 
 
 

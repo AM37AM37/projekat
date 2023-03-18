@@ -16,6 +16,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 import static ba.unsa.etf.rpr.AppFX.*;
+import static ba.unsa.etf.rpr.business.KatalogManager.currentUser;
 import static ba.unsa.etf.rpr.business.UserManager.CkeckEmail;
 import static ba.unsa.etf.rpr.controler.MainControler.*;
 import static javafx.scene.paint.Color.GREEN;
@@ -25,13 +26,19 @@ public class ProfileControler {
 
 
     @FXML
-      public Label usernameLabel;
+    public Label usernameLabel;
+    @FXML
+    public Button adminButton;
     public ListView<String> reciteList;
 
     public TextField newEmail,newUsername,newPassword;
     public Label ChangeErrorSuccses;
     @FXML
     public void initialize() {
+        if(currentUser.getId()!=12){
+            adminButton.setDisable(true);
+            adminButton.setOpacity(0);
+        }
         try {
             usernameLabel.setText(KatalogManager.currentUser.getUsername());
            loadRecite();
@@ -55,6 +62,12 @@ public class ProfileControler {
         KatalogControler.setSold(true);
         MainHomeScreen();
 
+    }
+    public void openProfile(){
+        MainProfileScreen();
+    }
+    public void openAdmin(){
+        MainAdminScreen();
     }
 
     public void ChangeColor(MouseEvent mouseEvent) {

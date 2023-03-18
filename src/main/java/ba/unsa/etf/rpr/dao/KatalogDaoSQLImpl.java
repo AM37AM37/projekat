@@ -4,7 +4,9 @@ package ba.unsa.etf.rpr.dao;
 import ba.unsa.etf.rpr.domain.Katalog;
 import com.mysql.cj.jdbc.Blob;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -55,42 +57,24 @@ public class KatalogDaoSQLImpl extends AbstractDao<Katalog> implements KatalogDa
 
 
 
-//    public  Katalog getById(int id) throws Exception {
-//        return executeQueryUnique("SELECT * FROM tenk_katalog WHERE id = ?", new Object[]{id});
-//    }
+
 
     public int getNextTankId() throws Exception {
         Katalog k =executeQueryUnique("SELECT * FROM tenk_katalog where id = (SELECT coalesce(max(id)) AS ID FROM tenk_katalog LIMIT 0, 1000)",null);
         return  k.getId()+1;
     }
 
-    /**
-     * @param text search string for quotes
-     * @return list of quotes
-     * @author ahajro2
-     */
+    public void updateTankId(int old,int neww) throws Exception {
+        StringBuilder builder = new StringBuilder();
+        builder.append("UPDATE tenk_katalog SET `id` = '").append(neww).append("' WHERE (`id` = '").append(old).append("');");
 
-//    @Override
-//    public List<Katalog> searchByText(String text) throws KatalogException{
-//        return executeQuery("SELECT * FROM quotes WHERE quote LIKE concat('%', ?, '%')", new Object[]{text});
-//    }
-//
-//    /**
-//     * @param category search string for quotes
-//     * @return list of quotes
-//     * @author ahajro2
-//     */
-//    @Override
-//    public List<Katalog> searchByCategory(Category category) throws KatalogException{
-//        return executeQuery("SELECT * FROM quotes WHERE category_id = ?", new Object[]{category.getId()});
-//    }
-//
-//    /**
-//     * @return random quote from DB
-//     * @throws KatalogException in case of error working with db
-//     */
-//    @Override
-//    public Katalog randomKatalog() throws KatalogException {
-//        return executeQueryUnique("SELECT * FROM quotes ORDER BY RAND() LIMIT 1", null);
-//    }
+        try{
+            PreparedStatement stmt = getConnection().prepareStatement(builder.toString());
+            stmt.executeUpdate();
+
+        }catch (SQLException e){
+            throw new Exception(e.getMessage(), e);
+        }
+    }
+
 }
