@@ -12,41 +12,13 @@ import java.io.IOException;
 
 import static ba.unsa.etf.rpr.AppFX.*;
 import static ba.unsa.etf.rpr.business.UserManager.*;
+import static ba.unsa.etf.rpr.controler.MainControler.MainHomeScreen;
+import static ba.unsa.etf.rpr.controler.MainControler.MainRegisterScreen;
 
 public class LoginControler {
 
 
-    private void HomeScreen () {
-        try{
-            FXMLLoader fxmlLoader = new FXMLLoader(fxmlKatalog);
-            KatalogControler katalogController = new KatalogControler();
-            fxmlLoader.setController(katalogController);
-            scene = new Scene(fxmlLoader.load());
-            stage1.setTitle("MainCatalog");
-            stage1.setScene(scene);
-            stage1.setResizable(false);
-            stage1.show();
 
-        }catch (Exception a){
-            System.out.println(a);
-        }
-    }
-
-    private void RegisterScreen() throws IOException {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(fxmlRegister);
-            RegisterControler registerController = new RegisterControler();
-            fxmlLoader.setController(registerController);
-            scene = new Scene(fxmlLoader.load());
-            stage1.setTitle("Register");
-            stage1.setScene(scene);
-            stage1.setResizable(false);
-            stage1.show();
-        }catch (Exception a){
-            System.out.println(a);
-            throw a;
-        }
-    }
 
 
     @FXML
@@ -65,14 +37,14 @@ public class LoginControler {
         System.out.println(PassProv);
         if (PassProv.equals(Pass)) {
             KatalogManager.currentUser=GetUserByEmail(Email);
-            HomeScreen();
+            MainHomeScreen();
         } else {
             LoginError.setText("Login not successful");
         }
     }
 
     public void onSignUpButtonClick(ActionEvent actionEvent) throws IOException {
-        RegisterScreen();
+        MainRegisterScreen();
     }
 
 

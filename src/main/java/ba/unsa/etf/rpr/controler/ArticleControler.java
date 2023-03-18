@@ -21,41 +21,12 @@ import java.sql.SQLException;
 import static ba.unsa.etf.rpr.AppFX.*;
 import static ba.unsa.etf.rpr.business.KatalogManager.*;
 import static ba.unsa.etf.rpr.controler.KatalogControler.*;
+import static ba.unsa.etf.rpr.controler.MainControler.*;
 import static javafx.scene.paint.Color.GREEN;
 import static javafx.scene.paint.Color.RED;
 
 public class ArticleControler {
-    private void ProfileScreen(){
-        try{
-            FXMLLoader fxmlLoader = new FXMLLoader(fxmlProfile);
-            ProfileControler profileController = new ProfileControler();
-            fxmlLoader.setController(profileController);
-            scene = new Scene(fxmlLoader.load());
-            stage1.setTitle("Profile");
-            stage1.setScene(scene);
-            stage1.setResizable(false);
-            //usernameLabel.setText(getUsername(userID));
-            stage1.show();
-        }catch (Exception a){
-            System.out.println(a);
-        }
-    }
 
-    private void HomeScreen () {
-        try{
-            FXMLLoader fxmlLoader = new FXMLLoader(fxmlKatalog);
-            KatalogControler katalogController = new KatalogControler();
-            fxmlLoader.setController(katalogController);
-            scene = new Scene(fxmlLoader.load());
-            stage1.setTitle("MainCatalog");
-            stage1.setScene(scene);
-            stage1.setResizable(false);
-            stage1.show();
-
-        }catch (Exception a){
-            System.out.println(a);
-        }
-    }
 
     @FXML
     public Text articleName, articleClass, articlePrice, articleDiscription,purchaseErrorSucsses,articleAmount;
@@ -83,20 +54,16 @@ public class ArticleControler {
 
 
     public void ChangeColor(MouseEvent mouseEvent) {
-        Button btn = (Button) mouseEvent.getSource();
-        btn.setTextFill(RED);
+        MainChangeColor(mouseEvent);
 
     }
 
     public void RevertColor(MouseEvent mouseEvent) {
-        Button btn = (Button) mouseEvent.getSource();
-        btn.setTextFill(Color.WHITE);
+        MainRevertColor(mouseEvent);
     }
 
-    public void openHome(ActionEvent actionEvent) throws IOException, SQLException {
-        KatalogControler.setSold(false);
-        HomeScreen();
-    }
+
+
 
 
     public void articlePurchase(ActionEvent actionEvent) throws Exception {
@@ -150,7 +117,7 @@ public class ArticleControler {
 
 
     public void openProfile(ActionEvent actionEvent) {
-        ProfileScreen();
+        MainProfileScreen();
     }
 
 
@@ -158,7 +125,12 @@ public class ArticleControler {
 
         public void openSold() throws SQLException {
         KatalogControler.setSold(true);
-            HomeScreen();
+            MainHomeScreen();
 
+    }
+
+    public void openHome(ActionEvent actionEvent) throws IOException, SQLException {
+        KatalogControler.setSold(false);
+        MainHomeScreen();
     }
 }

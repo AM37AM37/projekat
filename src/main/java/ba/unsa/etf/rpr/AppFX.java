@@ -28,6 +28,7 @@ public class AppFX extends Application {
     public static URL fxmlProfile = AppFX.class.getResource("profile.fxml");
     public static URL fxmlArticle = AppFX.class.getResource("article.fxml");
     public static URL fxmlRegister = AppFX.class.getResource("register.fxml");
+    public static URL fxmlAdmin = AppFX.class.getResource("admin.fxml");
     public static User mainUser;
     public void start(Stage stage) throws IOException, SQLException, ClassNotFoundException {
 

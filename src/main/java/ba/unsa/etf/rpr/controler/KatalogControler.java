@@ -27,47 +27,15 @@ import java.util.Vector;
 
 import static ba.unsa.etf.rpr.AppFX.*;
 import static ba.unsa.etf.rpr.business.KatalogManager.currentUser;
+import static ba.unsa.etf.rpr.controler.MainControler.*;
 
 public class KatalogControler {
-
-    private void openArticleScene(){
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(fxmlArticle);
-            ArticleControler articleController = new ArticleControler();
-            fxmlLoader.setController(articleController);
-            scene = new Scene(fxmlLoader.load());
-            stage1.setTitle("Article");
-            stage1.setScene(scene);
-            stage1.setResizable(false);
-            stage1.show();
-           // usernameLabel.setText(getUsername(userID));
-
-            //badArticleLoader(null);
-        }catch (Exception a){
-            System.out.println(a);
-        }
-    }
-
-    private void ProfileScreen(){
-        try{
-            FXMLLoader fxmlLoader = new FXMLLoader(fxmlProfile);
-            ProfileControler profileController = new ProfileControler();
-            fxmlLoader.setController(profileController);
-            scene = new Scene(fxmlLoader.load());
-            stage1.setTitle("Profile");
-            stage1.setScene(scene);
-            stage1.setResizable(false);
-            //usernameLabel.setText(getUsername(userID));
-            stage1.show();
-        }catch (Exception a){
-            System.out.println(a);
-        }
-    }
+    
 
 
 
     @FXML
-    private Button homeButton, myCatalogButton, profileButton, openArticle;
+    private Button homeButton, myCatalogButton, profileButton, openArticle,adminButton;
 
     @FXML
     public Label tankName1, tankClass1, tankPrice1, tankName2, tankClass2, tankPrice2, tankName3, tankClass3, tankPrice3;
@@ -75,8 +43,7 @@ public class KatalogControler {
     public Label tankName4, tankClass4, tankPrice4, tankName5, tankClass5, tankPrice5, tankName6, tankClass6, tankPrice6;
     @FXML
     public Label tankName7, tankClass7, tankPrice7, tankName8, tankClass8, tankPrice8, tankName9, tankClass9, tankPrice9;
-    //@FXML
-   // public Label tankID1, tankID2, tankID3, tankID4, tankID5, tankID6, tankID7, tankID8, tankID9;
+
     @FXML
     public ImageView tankImage1, tankImage2, tankImage3, tankImage4, tankImage5, tankImage6, tankImage7, tankImage8, tankImage9;
     @FXML
@@ -91,6 +58,10 @@ public class KatalogControler {
     @FXML
     public void initialize() {
         try {
+            if(currentUser.getId()!=12){
+                adminButton.setDisable(true);
+                adminButton.setOpacity(0);
+            }
             loadedTankId=0;
             usernameLabel.setText(currentUser.getUsername());
             badHomeLoader();
@@ -100,16 +71,15 @@ public class KatalogControler {
     }
 
 
-        public void ChangeColor(MouseEvent mouseEvent) {
-            Button btn = (Button) mouseEvent.getSource();
-            btn.setTextFill(Color.RED);
+    public void ChangeColor(MouseEvent mouseEvent) {
+        MainChangeColor(mouseEvent);
 
-        }
+    }
 
-        public void RevertColor(MouseEvent mouseEvent) {
-            Button btn = (Button) mouseEvent.getSource();
-            btn.setTextFill(Color.WHITE);
-        }
+    public void RevertColor(MouseEvent mouseEvent) {
+        MainRevertColor(mouseEvent);
+    }
+
 
 
 
@@ -126,6 +96,11 @@ public class KatalogControler {
         setSold(true);
         noMoreLoad.setText("");
         badHomeLoader();
+
+    }
+
+    public void openAdmin(ActionEvent actionEvent) throws Exception {
+        MainAdminScreen();
 
     }
 
@@ -220,7 +195,7 @@ public class KatalogControler {
         Button obj = (Button) actionEvent.getSource();
         String s = obj.getText();
         articleID = Integer.parseInt(s);
-        openArticleScene();
+        MainArticleScene();
     }
 
     public static int getarticleID() {
@@ -229,7 +204,7 @@ public class KatalogControler {
 
 
     public void openProfile(ActionEvent actionEvent) {
-        ProfileScreen();
+        MainProfileScreen();
     }
 
 

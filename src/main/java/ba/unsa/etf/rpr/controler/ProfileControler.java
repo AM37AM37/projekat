@@ -17,26 +17,13 @@ import java.util.List;
 
 import static ba.unsa.etf.rpr.AppFX.*;
 import static ba.unsa.etf.rpr.business.UserManager.CkeckEmail;
+import static ba.unsa.etf.rpr.controler.MainControler.*;
 import static javafx.scene.paint.Color.GREEN;
 import static javafx.scene.paint.Color.RED;
 
 public class ProfileControler {
 
-    public void HomeScreen () {
-        try{
-            FXMLLoader fxmlLoader = new FXMLLoader(fxmlKatalog);
-            KatalogControler katalogController = new KatalogControler();
-            fxmlLoader.setController(katalogController);
-            scene = new Scene(fxmlLoader.load());
-            stage1.setTitle("MainCatalog");
-            stage1.setScene(scene);
-            stage1.setResizable(false);
-            stage1.show();
 
-        }catch (Exception a){
-            System.out.println(a);
-        }
-    }
     @FXML
       public Label usernameLabel;
     public ListView<String> reciteList;
@@ -61,25 +48,23 @@ public class ProfileControler {
     }
     public void openHome(ActionEvent actionEvent) throws IOException, SQLException {
         KatalogControler.setSold(false);
-            HomeScreen();
+            MainHomeScreen();
         }
 
     public void openSold() throws SQLException {
         KatalogControler.setSold(true);
-        HomeScreen();
+        MainHomeScreen();
 
     }
 
-    public void ChangeColor(MouseEvent mouseEvent){
-        Button btn = (Button) mouseEvent.getSource();
-        btn.setTextFill(Color.RED);
+    public void ChangeColor(MouseEvent mouseEvent) {
+        MainChangeColor(mouseEvent);
 
     }
 
     public void RevertColor(MouseEvent mouseEvent) {
-            Button btn = (Button) mouseEvent.getSource();
-            btn.setTextFill(Color.WHITE);
-        }
+        MainRevertColor(mouseEvent);
+    }
 
 
 

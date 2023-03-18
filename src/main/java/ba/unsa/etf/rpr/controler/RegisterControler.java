@@ -12,26 +12,10 @@ import java.io.IOException;
 
 import static ba.unsa.etf.rpr.AppFX.*;
 import static ba.unsa.etf.rpr.business.UserManager.*;
+import static ba.unsa.etf.rpr.controler.MainControler.MainLoginScreen;
 
 public class RegisterControler {
-    private  void  LoginScreen() {
-        try {
 
-            FXMLLoader fxmlLoader = new FXMLLoader(fxmlLogin);
-            LoginControler loginController = new LoginControler();
-            fxmlLoader.setController(loginController);
-            scene = new Scene(fxmlLoader.load());
-            stage1.setTitle("Login");
-            stage1.setResizable(false);
-            stage1.setScene(scene);
-            stage1.show();
-
-
-        }catch (Exception a){
-            System.out.println(a);
-        }
-
-    }
     @FXML
     TextField EmailReg,PassReg,UsernameReg;
     @FXML
@@ -47,7 +31,7 @@ public class RegisterControler {
         } else {
             try {
                 AddAcc(newuser);
-                LoginScreen();
+                MainLoginScreen();
             } catch (Exception a) {
                 System.out.println(a);
             }
@@ -56,7 +40,7 @@ public class RegisterControler {
     }
 
     public void onBackButtonClick(ActionEvent actionEvent) throws IOException {
-        LoginScreen();
+        MainLoginScreen();
     }
 
 
