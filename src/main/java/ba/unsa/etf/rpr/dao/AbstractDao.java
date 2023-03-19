@@ -19,7 +19,7 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T>{
         try{
             this.tableName = tableName;
             Properties p = new Properties();
-            p.load(ClassLoader.getSystemResource("ba/unsa/etf/rpr/dp.properties2").openStream());
+            p.load(ClassLoader.getSystemResource("ba/unsa/etf/rpr/dp.properties").openStream());
             String url = p.getProperty("db.connection_string");
             String username = p.getProperty("db.username");
             String password = p.getProperty("db.password");

@@ -99,7 +99,7 @@ public class MainControler {
         }
     }
 
-    public static void MainRegisterScreen() throws IOException {
+    public static void MainRegisterScreen() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(fxmlRegister);
             RegisterControler registerController = new RegisterControler();
@@ -111,7 +111,6 @@ public class MainControler {
             stage1.show();
         }catch (Exception a){
             System.out.println(a);
-            throw a;
         }
     }
 

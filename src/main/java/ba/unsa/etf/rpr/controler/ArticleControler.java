@@ -5,22 +5,19 @@ import ba.unsa.etf.rpr.domain.Katalog;
 import ba.unsa.etf.rpr.domain.Recite;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 
 import java.io.IOException;
 import java.sql.SQLException;
 
-import static ba.unsa.etf.rpr.AppFX.*;
-import static ba.unsa.etf.rpr.business.KatalogManager.*;
-import static ba.unsa.etf.rpr.controler.KatalogControler.*;
+import static ba.unsa.etf.rpr.business.KatalogManager.currentUser;
+import static ba.unsa.etf.rpr.business.KatalogManager.purchaseArticle;
+import static ba.unsa.etf.rpr.controler.KatalogControler.BlobToImage;
+import static ba.unsa.etf.rpr.controler.KatalogControler.getarticleID;
 import static ba.unsa.etf.rpr.controler.MainControler.*;
 import static javafx.scene.paint.Color.GREEN;
 import static javafx.scene.paint.Color.RED;
@@ -66,7 +63,7 @@ public class ArticleControler {
 
 
 
-    public void articlePurchase(ActionEvent actionEvent) throws Exception {
+    public void articlePurchase() throws Exception {
         try {
             int amount= getAmount();
             if(amount>art.getTankAmount()){
@@ -78,7 +75,7 @@ public class ArticleControler {
                 purchaseArticle(r);
                 purchaseErrorSucsses.setFill(GREEN);
                 purchaseErrorSucsses.setText("purchase successful");
-                setArticleAmount(getarticleID());
+                setArticleAmount();
             }else {
                 purchaseErrorSucsses.setFill(RED);
                 purchaseErrorSucsses.setText("incorrect amount input");
@@ -87,13 +84,12 @@ public class ArticleControler {
         }catch (Exception e){
             purchaseErrorSucsses.setFill(RED);
             purchaseErrorSucsses.setText("purchase failed");
-            System.out.println(e);
             throw e;
 
         }
     }
 
-    public void setArticleAmount(int id) throws Exception {
+    public void setArticleAmount() throws Exception {
         if(DaoFactory.katalogDao.getById(getarticleID()).getTankAmount()!=0) {
             articleAmount.setText(DaoFactory.katalogDao.getById(getarticleID()).getTankAmount() + " left in stock");
         }else{
@@ -123,13 +119,13 @@ public class ArticleControler {
 
 
 
-        public void openSold() throws SQLException {
+        public void openSold() {
         KatalogControler.setSold(true);
             MainHomeScreen();
 
     }
 
-    public void openHome(ActionEvent actionEvent) throws IOException, SQLException {
+    public void openHome(ActionEvent actionEvent) {
         KatalogControler.setSold(false);
         MainHomeScreen();
     }

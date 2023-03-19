@@ -5,17 +5,13 @@ import ba.unsa.etf.rpr.dao.DaoFactory;
 import ba.unsa.etf.rpr.domain.Recite;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.paint.Color;
 
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-import static ba.unsa.etf.rpr.AppFX.*;
 import static ba.unsa.etf.rpr.business.KatalogManager.currentUser;
 import static ba.unsa.etf.rpr.business.UserManager.CkeckEmail;
 import static ba.unsa.etf.rpr.controler.MainControler.*;
@@ -53,12 +49,12 @@ public class ProfileControler {
 
         }
     }
-    public void openHome(ActionEvent actionEvent) throws IOException, SQLException {
+    public void openHome(ActionEvent actionEvent) {
         KatalogControler.setSold(false);
             MainHomeScreen();
         }
 
-    public void openSold() throws SQLException {
+    public void openSold() {
         KatalogControler.setSold(true);
         MainHomeScreen();
 

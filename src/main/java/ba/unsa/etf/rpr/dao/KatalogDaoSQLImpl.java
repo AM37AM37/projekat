@@ -10,10 +10,7 @@ import java.sql.SQLException;
 import java.util.Map;
 import java.util.TreeMap;
 
-/**
- * MySQL Implementation of DAO
- * @author Dino Keco
- */
+
 public class KatalogDaoSQLImpl extends AbstractDao<Katalog> implements KatalogDao {
 
     public KatalogDaoSQLImpl() {

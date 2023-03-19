@@ -6,8 +6,6 @@ import com.mysql.cj.jdbc.Blob;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
@@ -15,7 +13,6 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.paint.Color;
 import org.jetbrains.annotations.NotNull;
 
 import javax.imageio.ImageIO;
@@ -26,7 +23,6 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Vector;
 
-import static ba.unsa.etf.rpr.AppFX.*;
 import static ba.unsa.etf.rpr.business.KatalogManager.currentUser;
 import static ba.unsa.etf.rpr.controler.MainControler.*;
 
@@ -101,7 +97,7 @@ public class KatalogControler {
 
     }
 
-    public void openAdmin(ActionEvent actionEvent) throws Exception {
+    public void openAdmin(ActionEvent actionEvent) {
         MainAdminScreen();
 
     }
@@ -194,7 +190,7 @@ public class KatalogControler {
 
 
 
-    public void OpenArticle(ActionEvent actionEvent) throws SQLException, IOException {
+    public void OpenArticle(ActionEvent actionEvent) {
         Button obj = (Button) actionEvent.getSource();
         String s = obj.getText();
         articleID = Integer.parseInt(s);
@@ -216,8 +212,7 @@ public class KatalogControler {
     public static Image BlobToImage(@NotNull Blob blob) throws SQLException, IOException {
         InputStream in = blob.getBinaryStream();
         BufferedImage imagen = ImageIO.read(in);
-        Image imagenMonstruo = SwingFXUtils.toFXImage(imagen,null);
-        return imagenMonstruo;
+        return SwingFXUtils.toFXImage(imagen,null);
     }
 
 

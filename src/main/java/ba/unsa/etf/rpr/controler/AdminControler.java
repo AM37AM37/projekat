@@ -22,7 +22,7 @@ import javax.sql.rowset.serial.SerialBlob;
 import java.awt.image.BufferedImage;
 import java.io.*;
 import java.sql.*;
-import javax.sql.rowset.*;
+
 import static ba.unsa.etf.rpr.AppFX.stage1;
 import static ba.unsa.etf.rpr.controler.KatalogControler.BlobToImage;
 import static ba.unsa.etf.rpr.controler.MainControler.*;
@@ -44,14 +44,12 @@ public class AdminControler {
     private TextField idUserField,usernameUserField,emailUserField,passwordUserField;
     @FXML
     private ImageView browseImageView;
-   // @FXML
     private Image browseImage;
     private File file;
     private FileInputStream fis=new FileInputStream("src/main/resources/ba/unsa/etf/rpr/default.jpg");
 
     public AdminControler() throws FileNotFoundException {
     }
-    // private Desktop desktop= Desktop.getDesktop();
 
     @FXML
     public void initialize() throws IOException {
@@ -98,7 +96,7 @@ public class AdminControler {
         InputStream inputStream = serialBlob.getBinaryStream();
         PreparedStatement statement = connection.prepareStatement("SELECT ?", ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
         statement.setBlob(1, inputStream);
-        ResultSet resultSet = ((PreparedStatement) statement).executeQuery();
+        ResultSet resultSet = statement.executeQuery();
         resultSet.next();
         Blob blob = (Blob) resultSet.getBlob(1);
         resultSet.close();
@@ -235,17 +233,17 @@ public class AdminControler {
     public void openHome(){
         KatalogControler.setSold(false);
         MainHomeScreen();
-    };
+    }
     public void openSold(){
         KatalogControler.setSold(false);
         MainHomeScreen();
-    };
+    }
     public void openProfile(){
         MainProfileScreen();
-    };
+    }
     public void openAdmin(){
         MainAdminScreen();
-    };
+    }
     public void ChangeColor(MouseEvent mouseEvent) {
         MainChangeColor(mouseEvent);
     }

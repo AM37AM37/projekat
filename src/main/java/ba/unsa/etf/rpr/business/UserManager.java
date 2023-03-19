@@ -31,7 +31,7 @@ public class UserManager {
 
 
 
-    public static boolean CkeckEmail(String email) throws Exception {
+    public static boolean CkeckEmail(String email) {
         try{
             DaoFactory.userDao().searchByEmail(email);
             return true;
@@ -46,13 +46,9 @@ public class UserManager {
 
 
 
-    public static User AddAcc(User newuser) throws Exception {
+    public static void AddAcc(User newuser) throws Exception {
 
-        try{
-            return DaoFactory.userDao().add(newuser);
-        }catch (Exception e){
-            throw e;
-        }
+        DaoFactory.userDao().add(newuser);
     }
 
 

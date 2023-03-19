@@ -3,15 +3,13 @@ package ba.unsa.etf.rpr.controler;
 import ba.unsa.etf.rpr.domain.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
 import java.io.IOException;
 
-import static ba.unsa.etf.rpr.AppFX.*;
-import static ba.unsa.etf.rpr.business.UserManager.*;
+import static ba.unsa.etf.rpr.business.UserManager.AddAcc;
+import static ba.unsa.etf.rpr.business.UserManager.CkeckEmail;
 import static ba.unsa.etf.rpr.controler.MainControler.MainLoginScreen;
 
 public class RegisterControler {
@@ -20,7 +18,7 @@ public class RegisterControler {
     TextField EmailReg,PassReg,UsernameReg;
     @FXML
     Text RegisterError;
-    public void onRegisterButtonClick() throws Exception {
+    public void onRegisterButtonClick() {
         String Email = EmailReg.getText();
         String Pass = PassReg.getText();
         String Username = UsernameReg.getText();
