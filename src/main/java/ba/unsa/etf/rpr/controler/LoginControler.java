@@ -1,6 +1,7 @@
 package ba.unsa.etf.rpr.controler;
 
 import ba.unsa.etf.rpr.business.KatalogManager;
+import ba.unsa.etf.rpr.exceptions.EmailException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -33,7 +34,15 @@ public class LoginControler {
     public void onLoginButtonClick() throws Exception {
         String Email = EmailField.getText();
         String Pass = PassField.getText();
-        String PassProv = GetPassByEmail(Email);
+        String PassProv;
+        try {
+            PassProv = GetPassByEmail(Email);
+
+        }catch (Exception e){
+
+            LoginError.setText("Login not successful");
+            throw new EmailException("email doesnt exist");
+        }
         System.out.println(PassProv);
         if (PassProv.equals(Pass)) {
             KatalogManager.currentUser=GetUserByEmail(Email);
