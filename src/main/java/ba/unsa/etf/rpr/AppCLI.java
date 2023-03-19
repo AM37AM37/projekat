@@ -5,7 +5,6 @@ import ba.unsa.etf.rpr.dao.DaoFactory;
 import ba.unsa.etf.rpr.domain.User;
 import org.apache.commons.cli.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class AppCLI {
@@ -15,7 +14,6 @@ public class AppCLI {
         options.addOption("u", "username", true, "Username");
         options.addOption("p", "password", true, "Password");
         options.addOption("e", "email", true, "Email");
-        options.addOption("b", "balance", true, "Balance");
         options.addOption("a", "add", false, "Add new user");
         options.addOption("d", "delete", false, "Delete user");
         options.addOption("l", "list", false, "List all users");
@@ -29,8 +27,7 @@ public class AppCLI {
             formatter.printHelp("AppCLI", options);
         }
         if (cl.hasOption("s")) {
-            User user = new User();
-            user= DaoFactory.userDao().searchByEmail(cl.getOptionValue("e"));
+            User user= DaoFactory.userDao().searchByEmail(cl.getOptionValue("e"));
             if (user != null) {
                 System.out.println((user.getId()));
                 System.out.println(user.getUsername());
@@ -42,8 +39,7 @@ public class AppCLI {
         }
         if(cl.hasOption("l"))
         {
-            List<User> users = new ArrayList<>();
-            users=DaoFactory.userDao().getAll();
+            List<User> users=DaoFactory.userDao().getAll();
             for(User x: users)
             {
                 System.out.println(x.toString());
@@ -58,7 +54,7 @@ public class AppCLI {
                 user.setPassword(cl.getOptionValue("p"));
                 user.setEmail(cl.getOptionValue("e"));
                 DaoFactory.userDao().add(user);
-                System.out.println(user.toString());
+                System.out.println(user);
             }
             catch (Exception e)
             {
@@ -67,8 +63,7 @@ public class AppCLI {
         }
         if(cl.hasOption("d"))
         {
-            User user = new User();
-            user= DaoFactory.userDao().searchByEmail(cl.getOptionValue("e"));
+            User user = DaoFactory.userDao().searchByEmail(cl.getOptionValue("e"));
             if(user != null)
             {
                 DaoFactory.userDao().delete(user.getId());
@@ -81,8 +76,7 @@ public class AppCLI {
         }
         if(cl.hasOption("c"))
         {
-            User user = new User();
-            user= DaoFactory.userDao().searchByEmail(cl.getOptionValue("e"));
+            User user = DaoFactory.userDao().searchByEmail(cl.getOptionValue("e"));
             if(user != null)
             {
                 user.setPassword(cl.getOptionValue("p"));

@@ -12,9 +12,6 @@ public class KatalogManager {
     public static User currentUser;
 
 
-
-
-
     public static void  purchaseArticle(Recite r) throws Exception {
         ReciteManager.addRecite(r);
         Katalog k=DaoFactory.katalogDao().getById(r.getTankId());
