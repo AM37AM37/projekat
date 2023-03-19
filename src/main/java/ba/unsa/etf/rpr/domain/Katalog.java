@@ -16,6 +16,18 @@ public class Katalog implements Idable{
     private int tankamount;
 
 
+    public Katalog(Integer tankid, String tankname, String tankclass, Integer price, String description, Blob tankimage, int tankamount) {
+        this.tankid = tankid;
+        this.tankname = tankname;
+        this.tankclass = tankclass;
+        this.price = price;
+        this.description = description;
+        this.tankimage = tankimage;
+        this.tankamount = tankamount;
+    }
+
+    public Katalog() {
+    }
 
     public int getId() {
         return tankid;

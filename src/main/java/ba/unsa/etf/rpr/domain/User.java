@@ -10,6 +10,13 @@ public class User implements Idable{
     private String email;
     private String password;
 
+    public User(int userid, String username, String email, String password) {
+        this.userid = userid;
+        this.username = username;
+        this.email = email;
+        this.password = password;
+    }
+
     public User(String Username, String Pass, String Email) {
         this.email=Email;
         this.username=Username;
@@ -60,7 +67,12 @@ public class User implements Idable{
 
     @Override
     public String toString() {
-        return username;
+        return "User{" +
+                "userid=" + userid +
+                ", username='" + username + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 
     @Override
