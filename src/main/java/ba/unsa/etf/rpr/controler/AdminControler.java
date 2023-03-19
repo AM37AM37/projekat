@@ -1,6 +1,7 @@
 package ba.unsa.etf.rpr.controler;
 
 import ba.unsa.etf.rpr.business.KatalogManager;
+import ba.unsa.etf.rpr.dao.AbstractDao;
 import ba.unsa.etf.rpr.dao.DaoFactory;
 import ba.unsa.etf.rpr.domain.Katalog;
 import ba.unsa.etf.rpr.domain.Recite;
@@ -83,12 +84,12 @@ public class AdminControler {
             ImageIO.write(bufferedImage, "png", baos);
             byte[] byteArray = baos.toByteArray();
             SerialBlob blob = new SerialBlob(byteArray);
-            String username="projekt";
-            String password="!154TrE?Cf154!";
-            String URL="jdbc:mysql://localhost/freedb_wotdatamain";
-            Connection connection= DriverManager.getConnection(URL,username,password);
+//            String username="projekt";
+//            String password="!154TrE?Cf154!";
+//            String URL="jdbc:mysql://localhost/freedb_wotdatamain";
+//            Connection connection= DriverManager.getConnection(URL,username,password);
 
-            return  convertToBlob(blob,connection);
+            return  convertToBlob(blob, AbstractDao.connection);
         }
 
     public static Blob convertToBlob(SerialBlob serialBlob, Connection connection) throws SQLException, IOException {

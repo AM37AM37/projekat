@@ -12,7 +12,7 @@ import java.util.*;
  */
 public abstract class AbstractDao<T extends Idable> implements Dao<T>{
 
-    private Connection connection;
+    public static Connection connection;
     private String tableName;
 
     public AbstractDao(String tableName) {

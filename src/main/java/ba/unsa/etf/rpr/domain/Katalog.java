@@ -109,5 +109,4 @@ public class Katalog implements Idable{
                 ", tankamount=" + tankamount +
                 '}';
     }
-
 }
