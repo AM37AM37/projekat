@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 
+import static ba.unsa.etf.rpr.controler.MainControler.fxmlLogin;
 
 
 public class AppFX extends Application {
@@ -23,13 +24,7 @@ public class AppFX extends Application {
     public static Stage stage1=new Stage();
 
 
-    public static URL fxmlKatalog = AppFX.class.getResource("katalog.fxml");
-    public static URL fxmlLogin = AppFX.class.getResource("login.fxml");
-    public static URL fxmlProfile = AppFX.class.getResource("profile.fxml");
-    public static URL fxmlArticle = AppFX.class.getResource("article.fxml");
-    public static URL fxmlRegister = AppFX.class.getResource("register.fxml");
-    public static URL fxmlAdmin = AppFX.class.getResource("admin.fxml");
-    public static User mainUser;
+
     public void start(Stage stage) throws IOException, SQLException, ClassNotFoundException {
 
 

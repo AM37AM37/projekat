@@ -1,5 +1,7 @@
 package ba.unsa.etf.rpr.controler;
 
+import ba.unsa.etf.rpr.AppFX;
+import ba.unsa.etf.rpr.domain.User;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -7,11 +9,21 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 
 import java.io.IOException;
+import java.net.URL;
 
 import static ba.unsa.etf.rpr.AppFX.*;
 import static ba.unsa.etf.rpr.AppFX.stage1;
 
 public class MainControler {
+
+
+    public static URL fxmlKatalog = AppFX.class.getResource("katalog.fxml");
+    public static URL fxmlLogin = AppFX.class.getResource("login.fxml");
+    public static URL fxmlProfile = AppFX.class.getResource("profile.fxml");
+    public static URL fxmlArticle = AppFX.class.getResource("article.fxml");
+    public static URL fxmlRegister = AppFX.class.getResource("register.fxml");
+    public static URL fxmlAdmin = AppFX.class.getResource("admin.fxml");
+    public static User mainUser;
 
     public static void MainChangeColor(MouseEvent mouseEvent) {
         Button btn = (Button) mouseEvent.getSource();

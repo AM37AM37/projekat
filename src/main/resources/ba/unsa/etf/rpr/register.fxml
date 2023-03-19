@@ -9,11 +9,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane  minHeight="720.0" minWidth="1080.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" >
+<Pane minHeight="720.0" minWidth="1080.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
 <children>
       <ImageView fx:id="nuke" accessibleRole="MENU" blendMode="SRC_ATOP" cache="true" cacheHint="SCALE" fitHeight="720.0" layoutY="-1.0" mouseTransparent="true" preserveRatio="true" translateX="1.0" translateY="1.0" translateZ="1.0">
          <image>
-            <Image url="@tank-world-of-tanks-object-279-early-hd-wallpaper-preview.jpg" />
+            <Image url="@profile_background.jpg" />
          </image>
       </ImageView>
       <AnchorPane layoutX="529.0" layoutY="205.0" maxHeight="477.0" maxWidth="220.0" minHeight="431.0" minWidth="220.0" prefHeight="477.0" prefWidth="220.0">
@@ -39,7 +39,7 @@
                <Font size="25.0" />
             </font>
          </Button>
-            <Button layoutX="36.0"  layoutY="340.0" mnemonicParsing="false" onAction="#onBackButtonClick" opacity="0.7" prefHeight="52.0" prefWidth="148.0" text="Back">
+            <Button layoutX="36.0" layoutY="340.0" mnemonicParsing="false" onAction="#onBackButtonClick" opacity="0.7" prefHeight="52.0" prefWidth="148.0" text="Back">
                <font>
                   <Font size="25.0" />
                </font>
