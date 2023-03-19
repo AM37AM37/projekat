@@ -23,7 +23,7 @@ public class Recite implements Idable{
     }
 
     public Recite(int reciteid, int userid, int tankid, int amount, int total, String tankname) {
-        this.reciteid = reciteid;
+        this.reciteid =reciteid;
         this.userid = userid;
         this.tankid = tankid;
         this.amount = amount;
