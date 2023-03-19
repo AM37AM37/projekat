@@ -22,7 +22,7 @@ public class MainControler {
     public static URL fxmlArticle = AppFX.class.getResource("article.fxml");
     public static URL fxmlRegister = AppFX.class.getResource("register.fxml");
     public static URL fxmlAdmin = AppFX.class.getResource("admin.fxml");
-    public static User mainUser;
+
 
     public static void MainChangeColor(MouseEvent mouseEvent) {
         Button btn = (Button) mouseEvent.getSource();
