@@ -1,6 +1,5 @@
 package ba.unsa.etf.rpr.controler;
 
-import ba.unsa.etf.rpr.business.KatalogManager;
 import ba.unsa.etf.rpr.dao.DaoFactory;
 import ba.unsa.etf.rpr.domain.Recite;
 import javafx.event.ActionEvent;
@@ -8,11 +7,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 
-import java.io.IOException;
-import java.sql.SQLException;
 import java.util.List;
 
-import static ba.unsa.etf.rpr.business.KatalogManager.currentUser;
 import static ba.unsa.etf.rpr.business.UserManager.CkeckEmail;
 import static ba.unsa.etf.rpr.controler.MainControler.*;
 import static javafx.scene.paint.Color.GREEN;
@@ -36,14 +32,14 @@ public class ProfileControler {
             adminButton.setOpacity(0);
         }
         try {
-            usernameLabel.setText(KatalogManager.currentUser.getUsername());
+            usernameLabel.setText(currentUser.getUsername());
            loadRecite();
         } catch (Exception e) {
             new Alert(Alert.AlertType.NONE, e.getMessage(), ButtonType.OK).show();
         }}
 
     public void loadRecite() throws Exception {
-        List<Recite> rec= DaoFactory.reciteDao().getUserRecite(KatalogManager.currentUser.getId());
+        List<Recite> rec= DaoFactory.reciteDao().getUserRecite(currentUser.getId());
         for(Recite recite:rec){
                 reciteList.getItems().add(recite.toString());
 
@@ -88,8 +84,8 @@ public class ProfileControler {
             ChangeErrorSuccses.setTextFill(RED);
             ChangeErrorSuccses.setText("Email already registerd");
         }else{
-            KatalogManager.currentUser.setEmail(s);
-            DaoFactory.userDao().update(KatalogManager.currentUser);
+            currentUser.setEmail(s);
+            DaoFactory.userDao().update(currentUser);
 
             ChangeErrorSuccses.setTextFill(GREEN);
             ChangeErrorSuccses.setText("Email successfully changed");
@@ -105,11 +101,11 @@ public class ProfileControler {
             ChangeErrorSuccses.setText("Field cant be empty");
         }
         else {
-            KatalogManager.currentUser.setUsername(s);
-            DaoFactory.userDao().update(KatalogManager.currentUser);
+            currentUser.setUsername(s);
+            DaoFactory.userDao().update(currentUser);
             ChangeErrorSuccses.setTextFill(GREEN);
             ChangeErrorSuccses.setText("Username successfully changed");
-            usernameLabel.setText(KatalogManager.currentUser.getUsername());
+            usernameLabel.setText(currentUser.getUsername());
             newUsername.clear();
         }
     }
@@ -121,8 +117,8 @@ public class ProfileControler {
             ChangeErrorSuccses.setText("Field cant be empty");
         }
         else {
-            KatalogManager.currentUser.setPassword(s);
-            DaoFactory.userDao().update(KatalogManager.currentUser);
+            currentUser.setPassword(s);
+            DaoFactory.userDao().update(currentUser);
             ChangeErrorSuccses.setTextFill(GREEN);
             ChangeErrorSuccses.setText("Password successfully changed");
             newPassword.clear();

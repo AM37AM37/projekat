@@ -23,7 +23,6 @@ import java.awt.image.BufferedImage;
 import java.io.*;
 import java.sql.*;
 
-import static ba.unsa.etf.rpr.AppFX.stage1;
 import static ba.unsa.etf.rpr.controler.KatalogControler.BlobToImage;
 import static ba.unsa.etf.rpr.controler.MainControler.*;
 
@@ -53,7 +52,7 @@ public class AdminControler {
 
     @FXML
     public void initialize() throws IOException {
-        usernameLabel.setText(KatalogManager.currentUser.getUsername());
+        usernameLabel.setText(currentUser.getUsername());
         fileChooser=new FileChooser();
         fileChooser.getExtensionFilters().addAll(
                 new FileChooser.ExtensionFilter("Image Files","*.jpg","*.png")

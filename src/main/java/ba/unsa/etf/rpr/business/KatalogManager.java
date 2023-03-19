@@ -9,7 +9,7 @@ import ba.unsa.etf.rpr.domain.User;
 
 public class KatalogManager {
 
-    public static User currentUser;
+
 
 
     public static void  purchaseArticle(Recite r) throws Exception {

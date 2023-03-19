@@ -11,10 +11,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 
-import java.io.IOException;
-import java.sql.SQLException;
-
-import static ba.unsa.etf.rpr.business.KatalogManager.currentUser;
 import static ba.unsa.etf.rpr.business.KatalogManager.purchaseArticle;
 import static ba.unsa.etf.rpr.controler.KatalogControler.BlobToImage;
 import static ba.unsa.etf.rpr.controler.KatalogControler.getarticleID;

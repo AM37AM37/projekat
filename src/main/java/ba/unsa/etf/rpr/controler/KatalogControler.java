@@ -23,7 +23,6 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Vector;
 
-import static ba.unsa.etf.rpr.business.KatalogManager.currentUser;
 import static ba.unsa.etf.rpr.controler.MainControler.*;
 
 public class KatalogControler {

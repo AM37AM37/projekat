@@ -13,6 +13,7 @@ import static ba.unsa.etf.rpr.business.UserManager.GetPassByEmail;
 import static ba.unsa.etf.rpr.business.UserManager.GetUserByEmail;
 import static ba.unsa.etf.rpr.controler.MainControler.MainHomeScreen;
 import static ba.unsa.etf.rpr.controler.MainControler.MainRegisterScreen;
+import static ba.unsa.etf.rpr.controler.MainControler.*;
 
 public class LoginControler {
 
@@ -41,14 +42,14 @@ public class LoginControler {
         }
         System.out.println(PassProv);
         if (PassProv.equals(Pass)) {
-            KatalogManager.currentUser=GetUserByEmail(Email);
+            currentUser=GetUserByEmail(Email);
             MainHomeScreen();
         } else {
             LoginError.setText("Login not successful");
         }
     }
 
-    public void onSignUpButtonClick(ActionEvent actionEvent) throws IOException {
+    public void onSignUpButtonClick(ActionEvent actionEvent) {
         MainRegisterScreen();
     }
 

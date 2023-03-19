@@ -15,6 +15,7 @@ public class MainControler {
 
     public static Scene scene;
     public static Stage stage1=new Stage();
+    public static User currentUser;
     public static URL fxmlKatalog = AppFX.class.getResource("katalog.fxml");
     public static URL fxmlLogin = AppFX.class.getResource("login.fxml");
     public static URL fxmlProfile = AppFX.class.getResource("profile.fxml");
