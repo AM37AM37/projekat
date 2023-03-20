@@ -902,7 +902,8 @@ freedb_wotdatamain|schema||freedb_AM37AM37||UPDATE|G</Grants>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <column id="280" parent="277" name="recite_id">
+    <column id="280" parent="277" name="id">
+      <AutoIncrement>10</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -928,7 +929,7 @@ freedb_wotdatamain|schema||freedb_AM37AM37||UPDATE|G</Grants>
       <Position>6</Position>
     </column>
     <index id="286" parent="277" name="PRIMARY">
-      <ColNames>recite_id</ColNames>
+      <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
@@ -937,7 +938,8 @@ freedb_wotdatamain|schema||freedb_AM37AM37||UPDATE|G</Grants>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="288" parent="278" name="tank_id">
+    <column id="288" parent="278" name="id">
+      <AutoIncrement>25</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -967,7 +969,7 @@ freedb_wotdatamain|schema||freedb_AM37AM37||UPDATE|G</Grants>
       <Position>7</Position>
     </column>
     <index id="295" parent="278" name="PRIMARY">
-      <ColNames>tank_id</ColNames>
+      <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
@@ -976,9 +978,9 @@ freedb_wotdatamain|schema||freedb_AM37AM37||UPDATE|G</Grants>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="297" parent="279" name="user_ID">
+    <column id="297" parent="279" name="id">
+      <AutoIncrement>14</AutoIncrement>
       <DasType>int|0s</DasType>
-      <DefaultExpression>998</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
@@ -998,7 +1000,7 @@ freedb_wotdatamain|schema||freedb_AM37AM37||UPDATE|G</Grants>
       <Position>4</Position>
     </column>
     <index id="301" parent="279" name="PRIMARY">
-      <ColNames>user_ID</ColNames>
+      <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>

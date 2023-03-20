@@ -18,7 +18,7 @@ public class AppCLI {
         options.addOption("up", "password", true, "Password");
         options.addOption("ue", "email", true, "Email");
         options.addOption("ua", "useradd", false, "Add new user");
-        options.addOption("ud", "userdelete", false, "Delete user");
+        options.addOption("ud", "userdelete", true, "Delete user");
         options.addOption("ul", "userlist", false, "List all users");
         options.addOption("us", "usersearch", true, "Search user");
 
@@ -28,7 +28,7 @@ public class AppCLI {
         options.addOption("kp","katalogprice",true,"katalog price");
         options.addOption("kdi","katalogdiscription",true,"katalog discription");
         options.addOption("ka", "katalogadd", false, "Add new katalog item");
-        options.addOption("kd", "katalogdelete", false, "Delete katalog item");
+        options.addOption("kd", "katalogdelete", true, "Delete katalog item");
         options.addOption("kl", "kataloglist", false, "List katalog");
 
         options.addOption("rl", "recitelist", false, "List recites");
@@ -80,7 +80,7 @@ public class AppCLI {
             }
         }
         if(cl.hasOption("ud")){
-            User user = DaoFactory.userDao().searchByEmail(cl.getOptionValue("ue"));
+            User user = DaoFactory.userDao().searchByEmail(cl.getOptionValue("ud"));
             if(user != null)
             {
                 DaoFactory.userDao().delete(user.getId());
@@ -118,7 +118,7 @@ public class AppCLI {
             }
         }
         if(cl.hasOption("kd")){
-            Katalog kat = DaoFactory.katalogDao().getByTankName(cl.getOptionValue("kn"));
+            Katalog kat = DaoFactory.katalogDao().getByTankName(cl.getOptionValue("kd"));
             if(kat != null)
             {
                 DaoFactory.katalogDao().delete(kat.getId());
