@@ -105,8 +105,8 @@ Description: Specifies the value for katalog item name paramater.
 ```
 Description: Specifies the value for katalog item class paramater.
 
-```bash value3
-  -kp
+```bash 
+  -kp value3
 ```
 Description: Specifies the value for katalog item price paramater.
 
