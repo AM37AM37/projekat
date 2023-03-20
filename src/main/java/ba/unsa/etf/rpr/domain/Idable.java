@@ -8,21 +8,4 @@ public interface Idable {
     int getId();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
