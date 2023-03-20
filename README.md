@@ -1,19 +1,19 @@
 # projekat
 
-Project37 is the solution to all youre apocaliptic problem. During an apocalipse youre main consern is safty. Can you name anything safeer the a tank. A mashine made to take hits, and give them back twice as hard if not more. Get yours today at our online shop!!!
+Project37 is the solution to all youre apocaliptic problems. During an apocalypse youre main concearn is safty. Can you name anything safer then a tank. A machine made to take hits, and give them back twice as hard if not more. Get yours today at our online shop!!!
 
 ## Features
 
 - An avest database and stock of military vehicles(mainly tanks)
 
-- Ordering as easy ad clicking a button
+- Ordering is as easy as clicking a button
 
-- An admin pannel where they can add, edit, or delete katalog items, users information as well as recites(wink wink), allowing them to manage the app's content and data. 
+- An admin panel where they can add, edit, or delete catalog items, users information as well as recites(wink wink), allowing them to manage the app's content and data. 
 
 
 ## Installation
 
-Clone the repository and position yourself into its main directory. If you have GitHub installed on your PC, you can do the following:
+Clone the repository and position yourself into its main directory. If you have GitHub installed on youre PC, you can do the following:
 
 ```bash
   gh repo clone AM37AM37/projekat
@@ -77,12 +77,12 @@ Description: Specifies the value for email paramater.
   -ua -uu value1 -up value2 -ue value3 
 ```
 
-Description: Addes a new user to the database depending on the specified parameters.
+Description: Adds a new user to the database depending on the specified parameters.
 
 ```bash
   -ud value1
 ```
-Description: Deletes a user from the database with the specified paramater being the users username.
+Description: Deletes an new user from the database with the specified paramater being the users username.
 
 ```bash
   -ul 
@@ -93,48 +93,48 @@ Description: Lists all users from the database.
 ```bash
   -us value1 
 ```
-Description: Searches for the User in the database and return all of the information about him.
+Description: Searches for the User in the database and returns all of the information about him.
 
 ```bash
   -kn value1
 ```
-Description: Specifies the value for katalog item name paramater.
+Description: Specifies the value for catholog item name paramater.
 
 ```bash
   -kc value2
 ```
-Description: Specifies the value for katalog item class paramater.
+Description: Specifies the value for catholog item class paramater.
 
 ```bash 
   -kp value3
 ```
-Description: Specifies the value for katalog item price paramater.
+Description: Specifies the value for catholog item price paramater.
 
 ```bash
   -kdi value4
 ```
-Description: Specifies the value for katalog item discription paramater.
+Description: Specifies the value for catholog item discription paramater.
 
 ```bash
   -kam value5
 ```
-Description: Specifies the value for katalog item amount paramater.
+Description: Specifies the value for catholog item amount paramater.
 
 ```bash
   -ka -kn value1 -kc value2 -kp value3 -kdi value4 -kam value5 
 ```
 
-Description: Addes a new katalog item to the database depending on the specified parameters.
+Description: Adds a new catholog item to the database depending on the specified parameters.
 
 ```bash
   -kd value1
 ```
-Description: Deletes a katalog item from the database with the specified paramater being the katalog item name.
+Description: Deletes a catholog item from the database with the specified paramater being the catholog items name.
 
 ```bash
   -kl 
 ```
-Description: Lists katalog from the database.
+Description: Lists the catholog from the database.
 
 ```bash
   -rl 
@@ -162,5 +162,5 @@ Disclaimer: When running the JavaFX tests, you may encounter a failed test due t
 Have any questions or feedback? Feel free to reach out to us at aridzal2@etf.unsa.ba <br>
 We would love to hear from you and help you survive the apocalips! 
 
-Thank you for choosing Project37 for ur apocaliptic needs. We're confident that you'll love our products! 
+Thank you for choosing Project37 for ur apocalyptic needs. We're confident that you will love our products! 
 
