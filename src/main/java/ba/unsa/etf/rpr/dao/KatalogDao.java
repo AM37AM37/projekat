@@ -13,4 +13,5 @@ public interface KatalogDao extends Dao<Katalog>{
     void updateTankId(int old,int neww) throws Exception;
 
 
+    Katalog getByTankName(String s) throws Exception;
 }

@@ -74,4 +74,9 @@ public class KatalogDaoSQLImpl extends AbstractDao<Katalog> implements KatalogDa
         }
     }
 
+    @Override
+    public Katalog getByTankName(String s) throws Exception {
+        return executeQueryUnique("SELECT * FROM tenk_katalog WHERE tank_name = ?", new Object[]{s});
+    }
+
 }
