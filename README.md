@@ -55,48 +55,92 @@ The following parameters can be used when running the program from the command l
 Description: Prints all available paramaters.
 
 ```bash
-  -u value1 
+  -uu value1 
 ```
 
 Description: Specifies the value for username paramater.
 
 ```bash
-  -p value2
+  -up value2
 ```
 
 Description: Specifies the value for password paramater.
 
 ```bash
-  -e value3
+  -ue value3
 ```
 
 Description: Specifies the value for email paramater.
 
 
 ```bash
-  -a -u value1 -p value2 -e value3 
+  -ua -uu value1 -up value2 -ue value3 
 ```
 
 Description: Addes a new user to the database depending on the specified parameters.
 
 ```bash
-  -d value1
+  -ud value1
 ```
 Description: Deletes a user from the database with the specified paramater being the users username.
 
 ```bash
-  -l 
+  -ul 
 ```
 Description: Lists all users from the database.
-```bash
-  -c -u value1 -p value2 
-```
-Description: Changes the users password with the specified parameters. Paramater value1 reperesents the username of the given user, while value2 reperesents the new password.
+
 
 ```bash
-  -s value1 
+  -us value1 
 ```
 Description: Searches for the User in the database and return all of the information about him.
+
+```bash
+  -kn value1
+```
+Description: Specifies the value for katalog item name paramater.
+
+```bash
+  -kc value2
+```
+Description: Specifies the value for katalog item class paramater.
+
+```bash 
+  -kp value3
+```
+Description: Specifies the value for katalog item price paramater.
+
+```bash
+  -kdi value4
+```
+Description: Specifies the value for katalog item discription paramater.
+
+```bash
+  -kam value5
+```
+Description: Specifies the value for katalog item amount paramater.
+
+```bash
+  -ka -kn value1 -kc value2 -kp value3 -kdi value4 -kam value5 
+```
+
+Description: Addes a new katalog item to the database depending on the specified parameters.
+
+```bash
+  -kd value1
+```
+Description: Deletes a katalog item from the database with the specified paramater being the katalog item name.
+
+```bash
+  -kl 
+```
+Description: Lists katalog from the database.
+
+```bash
+  -rl 
+```
+Description: Lists all recites from the database.
+
 ```bash
   -v 
 ```
