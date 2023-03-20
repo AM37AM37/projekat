@@ -22,9 +22,6 @@ public class AppFX extends Application {
 
 
 try {
-
-
-
         FXMLLoader fxmlLoader = new FXMLLoader(fxmlLogin);
         LoginControler loginController = new LoginControler();
         fxmlLoader.setController(loginController);
