@@ -16,8 +16,6 @@ public class AppFX extends Application {
 
 
 
-
-
     public void start(Stage stage) {
 
 

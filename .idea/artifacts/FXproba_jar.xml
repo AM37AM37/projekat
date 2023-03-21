@@ -1,0 +1,75 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="FXproba:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/FXproba_jar</output-path>
+    <root id="archive" name="FXproba.jar">
+      <element id="module-output" name="FXproba" />
+      <element id="module-test-output" name="FXproba" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/19-ea+7/javafx-graphics-19-ea+7-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.14.2/jackson-databind-2.14.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/eu/hansolo/tilesfx/17.1.15/tilesfx-17.1.15.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/eu/hansolo/toolboxfx/17.0.29/toolboxfx-17.0.29.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/woodstox/woodstox-core/6.5.0/woodstox-core-6.5.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/19/javafx-fxml-19.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jetbrains/annotations/13.0/annotations-13.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/testfx/testfx-core/4.0.16-alpha/testfx-core-4.0.16-alpha.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/github/almasb/fxgl-entity/17.1/fxgl-entity-17.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-swing/17.0.2/javafx-swing-17.0.2-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/github/almasb/fxgl-scene/17.1/fxgl-scene-17.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/testfx/testfx-junit5/4.0.16-alpha/testfx-junit5-4.0.16-alpha.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-media/19-ea+7/javafx-media-19-ea+7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib/1.5.32/kotlin-stdlib-1.5.32-modular.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/3.19.4/protobuf-java-3.19.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/eu/hansolo/fx/heatmap/17.0.12/heatmap-17.0.12.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/github/almasb/fxgl-gameplay/17.1/fxgl-gameplay-17.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/net/bytebuddy/byte-buddy-agent/1.12.19/byte-buddy-agent-1.12.19.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-base/19-ea+7/javafx-base-19-ea+7-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/jackson/dataformat/jackson-dataformat-xml/2.14.2/jackson-dataformat-xml-2.14.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/mysql/mysql-connector-j/8.0.31/mysql-connector-j-8.0.31.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/19/javafx-controls-19-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/mockito/mockito-inline/4.11.0/mockito-inline-4.11.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.14.2/jackson-annotations-2.14.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/19/javafx-controls-19.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/19-ea+7/javafx-graphics-19-ea+7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/webjars/jquery/3.6.1/jquery-3.6.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/testng/testng/7.7.1/testng-7.7.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/codehaus/woodstox/stax2-api/4.2.1/stax2-api-4.2.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/beust/jcommander/1.82/jcommander-1.82.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.13.3/jackson-core-2.13.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/github/almasb/fxgl-core/17.1/fxgl-core-17.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-base/19-ea+7/javafx-base-19-ea+7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/controlsfx/controlsfx/11.1.2/controlsfx-11.1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/kordamp/ikonli/ikonli-javafx/12.3.1/ikonli-javafx-12.3.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/github/almasb/fxgl-io/17.1/fxgl-io-17.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/mockito/mockito-core/4.11.0/mockito-core-4.11.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-swing/17.0.2/javafx-swing-17.0.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/kordamp/ikonli/ikonli-core/12.3.1/ikonli-core-12.3.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/net/bytebuddy/byte-buddy/1.12.19/byte-buddy-1.12.19.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/gluonhq/attach/storage/4.0.13/storage-4.0.13.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/eu/hansolo/toolbox/17.0.26/toolbox-17.0.26.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/github/almasb/fxgl/17.1/fxgl-17.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/objenesis/objenesis/3.3/objenesis-3.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib-common/1.5.32/kotlin-stdlib-common-1.5.32.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-media/19-ea+7/javafx-media-19-ea+7-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PATH_TO_FX$/mysql-connector-java-8.0.25/mysql-connector-java-8.0.25.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/gluonhq/attach/lifecycle/4.0.13/lifecycle-4.0.13.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-web/19-ea+7/javafx-web-19-ea+7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/net/synedra/validatorfx/0.4.0/validatorfx-0.4.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/assertj/assertj-core/3.13.2/assertj-core-3.13.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/kordamp/bootstrapfx/bootstrapfx-core/0.4.0/bootstrapfx-core-0.4.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/gluonhq/attach/audio/4.0.13/audio-4.0.13.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/commons-cli/commons-cli/1.5.0/commons-cli-1.5.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/dlsc/formsfx/formsfx-core/11.5.0/formsfx-core-11.5.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/19/javafx-fxml-19-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-web/19-ea+7/javafx-web-19-ea+7-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/eu/hansolo/fx/countries/17.0.23/countries-17.0.23.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/gluonhq/attach/util/4.0.13/util-4.0.13.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
