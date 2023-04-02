@@ -16,7 +16,7 @@ Project37 is the solution to all youre apocaliptic problems. During an apocalyps
 Clone the repository and position yourself into its main directory. If you have GitHub installed on youre PC, you can do the following:
 
 ```bash
-  gh repo clone AM37AM37/projekat
+  git clone https://github.com/AM37AM37/projekat
   cd my-project
 ```
 
